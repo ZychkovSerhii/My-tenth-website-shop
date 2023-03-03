@@ -66,13 +66,15 @@ header {
 .cart {
   position: fixed;
   top: 0;
-  right: 0;
+  max-height: 1000px;
+  right: -100%;
   width: 360px;
   min-height: 100vh;
   padding: 20px;
   background: var(--bg-color);
   box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
   transition: 0.3s;
+  overflow: scroll;
 }
 
 .cart.active {
@@ -100,12 +102,12 @@ header {
 }
 
 .cart-product-title {
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-transform: uppercase;
 }
 
 .cart-price {
-  font-weight: 500;
+  font-weight: 400;
 }
 .cart-quantity {
   border: 1px solid var(--text-color);
@@ -225,4 +227,49 @@ header {
 .add-cart:hover {
   background: hsl(249, 32%, 17%);
   padding: 15px;
+}
+
+/* Making Pesponsive */
+
+@media (max-width: 1080px) {
+  .nav {
+    padding: 15px;
+  }
+
+  section {
+    padding: 3rem 0 2rem;
+  }
+
+  .container {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .shop {
+    margin-top: 2rem !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .nav {
+    padding: 11px;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .cart {
+    width: 320px;
+  }
+}
+
+@media (max-width: 400px) {
+  .shop {
+    margin-top: 1rem !important;
+  }
+
+  .cart {
+    width: 280px;
+  }
 }
